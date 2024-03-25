@@ -1,31 +1,15 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Staatliches&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap');
-
-
-  
-body
+  body
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-image: linear-gradient( to top left,  black, whitesmoke ) 
-    
-}
-
- .caixa
-{
-    position: relative;
-    width: 1000px;
-    height: 700px;
-    color: whitesmoke;
-    background: rgb(14, 12, 12);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 100%;
+  display: flex;
+  min-height: 100vh;
+  background-image: url(https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2022/08/blob_35zm-2048x1152.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: brightness(150%);
 } 
 
 * {
@@ -53,6 +37,7 @@ h1.titulo {
     font-size: 40px;
     position: absolute;
     top: 13%;
+    color: aliceblue;
   
 }
 
@@ -64,35 +49,19 @@ p.frase {
     word-wrap: break-word;
     margin-top: 40%;
     letter-spacing: 1px;
+    color: aliceblue;
+
 }
 
 p.autor {
     text-align: right;
     margin-top: 25%;
+    color: aliceblue;
+
 }
 
-  .linha
-  {
-    content: '';
-    position:absolute;
-    top: 83%;
-    left: 0%;
-    width: 99%;
-    height:0px;
-    background-color: whitesmoke;
-  }
 
-  
-  .linha01
-  {
-    content: '';
-    position:absolute;
-    top: 25%;
-    left: 0%;
-    width: 99%;
-    height:1px;
-    background-color: whitesmoke;
-  }
+
     .container {
         text-align: left; /* ou left, dependendo da sua preferência */
       }
@@ -106,7 +75,7 @@ p.autor {
         margin-bottom: 800%;
         margin-right: 10px; /* Espaçamento entre os botões */
       }
-      .btn-2 {
+       .btn-2 {
         position: fixed;
         top: 10px;
         left: 55px;
@@ -116,12 +85,66 @@ p.autor {
         margin-right: 10px; /* Espaçamento entre os botões */
       }
  
-      .button-container {
+       .button-container {
   position: fixed;
   top: 10px;
   left: 10px;
+} 
+
+ .btn {
+  margin-right: 5px;  
 }
 
-.btn {
-  margin-right: 5px; /* Espaçamento entre os botões, ajuste conforme necessário */
+ .caixa-vermelho
+{
+  position: relative;
+  width: 1000px;
+  height: 700px;
+  border: 2px solid red; 
+  color: whitesmoke;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  padding: 10px;
+ 
+ } 
+
+ .caixa-azul
+{
+ position: relative;
+background-color: transparent;
+border: 2px solid blue;
+
+
+
+ } 
+
+ .quadrado-pai {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: transparent;
+  box-sizing: border-box;
+  margin: 50px auto;
+}
+
+.quadrado-pai::before,
+.quadrado-pai::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: #f00; /* Cor do quadrado interno */
+}
+
+.quadrado-pai::before {
+  top: 0;
+  left: 0;
+}
+
+.quadrado-pai::after {
+  bottom: 0;
+  right: 0;
 }
